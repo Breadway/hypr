@@ -1,0 +1,717 @@
+{
+    "active_layout": "qwerty",
+    "default_mods": [
+        "SUPER"
+    ],
+    "globals": [
+        {
+            "action": "exec",
+            "command": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+            "key": "XF86AudioRaiseVolume",
+            "mods": [],
+            "options": {
+                "locked": true,
+                "repeating": true
+            }
+        },
+        {
+            "action": "exec",
+            "command": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+            "key": "XF86AudioLowerVolume",
+            "mods": [],
+            "options": {
+                "locked": true,
+                "repeating": true
+            }
+        },
+        {
+            "action": "exec",
+            "command": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+            "key": "XF86AudioMute",
+            "mods": [],
+            "options": {
+                "locked": true
+            }
+        },
+        {
+            "action": "exec",
+            "command": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+            "key": "XF86AudioMicMute",
+            "mods": [],
+            "options": {
+                "locked": true
+            }
+        },
+        {
+            "action": "exec",
+            "command": "brightnessctl -e4 -n2 set 5%+",
+            "key": "XF86MonBrightnessUp",
+            "mods": [],
+            "options": {
+                "locked": true,
+                "repeating": true
+            }
+        },
+        {
+            "action": "exec",
+            "command": "brightnessctl -e4 -n2 set 5%-",
+            "key": "XF86MonBrightnessDown",
+            "mods": [],
+            "options": {
+                "locked": true,
+                "repeating": true
+            }
+        },
+        {
+            "action": "exec",
+            "command": "playerctl next",
+            "key": "XF86AudioNext",
+            "mods": [],
+            "options": {
+                "locked": true
+            }
+        },
+        {
+            "action": "exec",
+            "command": "playerctl previous",
+            "key": "XF86AudioPrev",
+            "mods": [],
+            "options": {
+                "locked": true
+            }
+        },
+        {
+            "action": "exec",
+            "command": "playerctl play-pause",
+            "key": "XF86AudioPlay",
+            "mods": [],
+            "options": {
+                "locked": true
+            }
+        }
+    ],
+    "layouts": {
+        "colemak": [
+            {
+                "action": "exec",
+                "command": "kitty",
+                "key": "RETURN"
+            },
+            {
+                "action": "exec",
+                "command": "lua /home/breadway/.config/hypr/scripts/system/sync-display.lua",
+                "key": "Q"
+            },
+            {
+                "action": "kill",
+                "key": "BACKSPACE"
+            },
+            {
+                "action": "exec",
+                "command": "/home/breadway/.local/bin/spotlight-wofi",
+                "key": "SPACE"
+            },
+            {
+                "action": "exec",
+                "command": "nautilus",
+                "key": "E"
+            },
+            {
+                "action": "exec",
+                "command": "/home/breadway/.local/bin/zen-browser-single",
+                "key": "N"
+            },
+            {
+                "action": "exec",
+                "command": "code",
+                "key": "O"
+            },
+            {
+                "action": "exec",
+                "command": "steam",
+                "key": "G"
+            },
+            {
+                "action": "exec",
+                "command": "spotify",
+                "key": "M"
+            },
+            {
+                "action": "exec",
+                "command": "minecraft-launcher",
+                "key": "M",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ]
+            },
+            {
+                "action": "exec",
+                "command": "flatpak run org.equicord.equibop",
+                "key": "D"
+            },
+            {
+                "action": "exec",
+                "command": "jellyfin-desktop",
+                "key": "J"
+            },
+            {
+                "action": "exec",
+                "command": "flatpak run org.onlyoffice.desktopeditors",
+                "key": "W"
+            },
+            {
+                "action": "exec",
+                "command": "hyprshot -m region",
+                "key": "S",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ]
+            },
+            {
+                "action": "exec",
+                "command": "hyprshot -m window -m region --clipboard-only",
+                "key": "D",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ]
+            },
+            {
+                "action": "exit",
+                "key": "K"
+            },
+            {
+                "action": "float",
+                "key": "L"
+            },
+            {
+                "action": "fullscreen",
+                "key": "A"
+            },
+            {
+                "action": "resize",
+                "key": "R"
+            },
+            {
+                "action": "layout",
+                "key": "C",
+                "layout": "togglesplit"
+            },
+            {
+                "action": "focus",
+                "direction": "left",
+                "key": "left"
+            },
+            {
+                "action": "focus",
+                "direction": "right",
+                "key": "right"
+            },
+            {
+                "action": "focus",
+                "direction": "up",
+                "key": "up"
+            },
+            {
+                "action": "focus",
+                "direction": "down",
+                "key": "down"
+            },
+            {
+                "action": "focus",
+                "key": "1",
+                "workspace": 1
+            },
+            {
+                "action": "focus",
+                "key": "2",
+                "workspace": 2
+            },
+            {
+                "action": "focus",
+                "key": "3",
+                "workspace": 3
+            },
+            {
+                "action": "focus",
+                "key": "4",
+                "workspace": 4
+            },
+            {
+                "action": "focus",
+                "key": "5",
+                "workspace": 5
+            },
+            {
+                "action": "focus",
+                "key": "6",
+                "workspace": 6
+            },
+            {
+                "action": "focus",
+                "key": "7",
+                "workspace": 7
+            },
+            {
+                "action": "focus",
+                "key": "8",
+                "workspace": 8
+            },
+            {
+                "action": "focus",
+                "key": "9",
+                "workspace": 9
+            },
+            {
+                "action": "focus",
+                "key": "0",
+                "workspace": 10
+            },
+            {
+                "action": "move",
+                "key": "1",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 1
+            },
+            {
+                "action": "move",
+                "key": "2",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 2
+            },
+            {
+                "action": "move",
+                "key": "3",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 3
+            },
+            {
+                "action": "move",
+                "key": "4",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 4
+            },
+            {
+                "action": "move",
+                "key": "5",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 5
+            },
+            {
+                "action": "move",
+                "key": "6",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 6
+            },
+            {
+                "action": "move",
+                "key": "7",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 7
+            },
+            {
+                "action": "move",
+                "key": "8",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 8
+            },
+            {
+                "action": "move",
+                "key": "9",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 9
+            },
+            {
+                "action": "move",
+                "key": "0",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 10
+            },
+            {
+                "action": "focus",
+                "key": "mouse_down",
+                "workspace": "e+1"
+            },
+            {
+                "action": "focus",
+                "key": "mouse_up",
+                "workspace": "e-1"
+            },
+            {
+                "action": "drag",
+                "key": "mouse:272",
+                "mods": [
+                    "SUPER"
+                ],
+                "options": {
+                    "mouse": true
+                }
+            },
+            {
+                "action": "resize",
+                "key": "mouse:273",
+                "mods": [
+                    "SUPER"
+                ],
+                "options": {
+                    "mouse": true
+                }
+            },
+            {
+                "action": "exec",
+                "command": "blueman-manager",
+                "key": "U",
+                "mods": [
+                    "SUPER"
+                ]
+            }
+        ],
+        "qwerty": [
+            {
+                "action": "exec",
+                "command": "kitty",
+                "key": "RETURN"
+            },
+            {
+                "action": "exec",
+                "command": "lua /home/breadway/.config/hypr/scripts/system/sync-display.lua",
+                "key": "Q"
+            },
+            {
+                "action": "kill",
+                "key": "BACKSPACE"
+            },
+            {
+                "action": "exec",
+                "command": "/home/breadway/.local/bin/spotlight-wofi",
+                "key": "SPACE"
+            },
+            {
+                "action": "exec",
+                "command": "nautilus",
+                "key": "E"
+            },
+            {
+                "action": "exec",
+                "command": "/home/breadway/.local/bin/zen-browser-single",
+                "key": "B"
+            },
+            {
+                "action": "exec",
+                "command": "code",
+                "key": "C"
+            },
+            {
+                "action": "exec",
+                "command": "steam",
+                "key": "G"
+            },
+            {
+                "action": "exec",
+                "command": "spotify",
+                "key": "M"
+            },
+            {
+                "action": "exec",
+                "command": "minecraft-launcher",
+                "key": "M",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ]
+            },
+            {
+                "action": "exec",
+                "command": "flatpak run org.equicord.equibop",
+                "key": "D"
+            },
+            {
+                "action": "exec",
+                "command": "jellyfin-desktop",
+                "key": "J"
+            },
+            {
+                "action": "exec",
+                "command": "flatpak run org.onlyoffice.desktopeditors",
+                "key": "W"
+            },
+            {
+                "action": "exec",
+                "command": "hyprshot -m region",
+                "key": "S",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ]
+            },
+            {
+                "action": "exec",
+                "command": "hyprshot -m window -m region --clipboard-only",
+                "key": "D",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ]
+            },
+            {
+                "action": "exit",
+                "key": "N"
+            },
+            {
+                "action": "float",
+                "key": "V"
+            },
+            {
+                "action": "fullscreen",
+                "key": "F"
+            },
+            {
+                "action": "resize",
+                "key": "R"
+            },
+            {
+                "action": "layout",
+                "key": "T",
+                "layout": "togglesplit"
+            },
+            {
+                "action": "focus",
+                "direction": "left",
+                "key": "left"
+            },
+            {
+                "action": "focus",
+                "direction": "right",
+                "key": "right"
+            },
+            {
+                "action": "focus",
+                "direction": "up",
+                "key": "up"
+            },
+            {
+                "action": "focus",
+                "direction": "down",
+                "key": "down"
+            },
+            {
+                "action": "focus",
+                "key": "1",
+                "workspace": 1
+            },
+            {
+                "action": "focus",
+                "key": "2",
+                "workspace": 2
+            },
+            {
+                "action": "focus",
+                "key": "3",
+                "workspace": 3
+            },
+            {
+                "action": "focus",
+                "key": "4",
+                "workspace": 4
+            },
+            {
+                "action": "focus",
+                "key": "5",
+                "workspace": 5
+            },
+            {
+                "action": "focus",
+                "key": "6",
+                "workspace": 6
+            },
+            {
+                "action": "focus",
+                "key": "7",
+                "workspace": 7
+            },
+            {
+                "action": "focus",
+                "key": "8",
+                "workspace": 8
+            },
+            {
+                "action": "focus",
+                "key": "9",
+                "workspace": 9
+            },
+            {
+                "action": "focus",
+                "key": "0",
+                "workspace": 10
+            },
+            {
+                "action": "move",
+                "key": "1",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 1
+            },
+            {
+                "action": "move",
+                "key": "2",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 2
+            },
+            {
+                "action": "move",
+                "key": "3",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 3
+            },
+            {
+                "action": "move",
+                "key": "4",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 4
+            },
+            {
+                "action": "move",
+                "key": "5",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 5
+            },
+            {
+                "action": "move",
+                "key": "6",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 6
+            },
+            {
+                "action": "move",
+                "key": "7",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 7
+            },
+            {
+                "action": "move",
+                "key": "8",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 8
+            },
+            {
+                "action": "move",
+                "key": "9",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 9
+            },
+            {
+                "action": "move",
+                "key": "0",
+                "mods": [
+                    "SUPER",
+                    "SHIFT"
+                ],
+                "workspace": 10
+            },
+            {
+                "action": "focus",
+                "key": "mouse_down",
+                "workspace": "e+1"
+            },
+            {
+                "action": "focus",
+                "key": "mouse_up",
+                "workspace": "e-1"
+            },
+            {
+                "action": "drag",
+                "key": "mouse:272",
+                "mods": [
+                    "SUPER"
+                ],
+                "options": {
+                    "mouse": true
+                }
+            },
+            {
+                "action": "resize",
+                "key": "mouse:273",
+                "mods": [
+                    "SUPER"
+                ],
+                "options": {
+                    "mouse": true
+                }
+            },
+            {
+                "action": "exec",
+                "command": "blueman-manager",
+                "key": "U",
+                "mods": [
+                    "SUPER"
+                ]
+            },
+            {
+                "action": "exec",
+                "command": "lua /home/breadway/.config/hypr/scripts/system/sync-display.lua",
+                "key": "O",
+                "mods": [
+                    "SUPER"
+                ]
+            }
+        ]
+    }
+}
