@@ -5,6 +5,7 @@ local env_vars = {
 	XCURSOR_SIZE = "24",
 	HYPRCURSOR_SIZE = "24",
 	WALLPAPERS = home .. "/Pictures/",
+	WALLPAPER_PROVIDER = "awww",
 	HYPERSHOT_DIR = home .. "/Pictures/Screenshots/",
 }
 

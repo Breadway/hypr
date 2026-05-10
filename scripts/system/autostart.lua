@@ -4,7 +4,10 @@ local home = os.getenv("HOME") or "/home/breadway"
 local startup_commands = {
     "wal -R",
     home .. "/colorshell/build/release/colorshell",
-    home .. "/keyboard_listener.sh",
+    "awww-daemon",
+    "awww restore",
+    home .. "/hypr/scripts/system/keyboard_and_display_watcher.sh",
+    home .. "/hypr/scripts/system/watch_hypr_scripts.sh",
     "systemctl --user daemon-reload",
     "systemctl --user start hypr-display-sync.service",
     "systemctl --user start hyprpolkitagent",
@@ -12,6 +15,7 @@ local startup_commands = {
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "flatpak run dev.deedles.Trayscale",
     "wificonf init",
+    "pkill -f hyprpaper",
 }
 
 hl.on("hyprland.start", function()

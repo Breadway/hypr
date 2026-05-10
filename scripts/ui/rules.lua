@@ -45,7 +45,7 @@ hl.window_rule({
     rounding = 0,
     no_shadow = true,
     no_blur = true,
-    opacity = 0.3,
+    opacity = 0.5,
     size = { 500, 300 }, -- Changed to a Lua table
     no_focus = true,
     -- Using strings for the coordinates often resolves the 'ignored' status
