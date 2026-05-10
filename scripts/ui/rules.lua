@@ -45,9 +45,9 @@ hl.window_rule({
     rounding = 0,
     no_shadow = true,
     no_blur = true,
-    opacity = 0.7,
-    size = { 600, 400 }, -- Changed to a Lua table
+    opacity = 0.2,
+    size = { 500, 300 }, -- Changed to a Lua table
     no_focus = true,
     -- Using strings for the coordinates often resolves the 'ignored' status
-    move = "100%-610 100%-410",
+    move = {"1400", "900"}
 })

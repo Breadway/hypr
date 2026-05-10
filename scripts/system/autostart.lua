@@ -4,6 +4,7 @@ local home = os.getenv("HOME") or "/home/breadway"
 local startup_commands = {
     "wal -R",
     home .. "/colorshell/build/release/colorshell",
+    home .. "/keyboard_listener.sh",
     "systemctl --user daemon-reload",
     "systemctl --user start hypr-display-sync.service",
     "systemctl --user start hyprpolkitagent",
@@ -11,7 +12,6 @@ local startup_commands = {
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "flatpak run dev.deedles.Trayscale",
     "wificonf init",
-    home .. "/.config/hypr/scripts/system/watch-display.sh"
 }
 
 hl.on("hyprland.start", function()
