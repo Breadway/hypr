@@ -2,3 +2,5 @@
 redox-layout-viewer
 .luarc.json
 hyprland-api.lua
+hyprpaper.conf
+hyprlock.conf
