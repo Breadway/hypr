@@ -3,7 +3,7 @@ local home = os.getenv("HOME") or "/home/breadway"
 
 local startup_commands = {
     "wal -R",
-    home .. "/colorshell/build/release/colorshell",
+    home .. "/colorshell/build/colorshell",
     "awww-daemon",
     "awww restore",
     home .. "/hypr/scripts/system/keyboard_and_display_watcher.sh",
@@ -23,3 +23,5 @@ hl.on("hyprland.start", function()
         hl.dispatch(hl.dsp.exec_cmd(command))
     end
 end)
+
+hl.dispatch(hl.dsp.exec_cmd("pkill -f hyprpaper"))
