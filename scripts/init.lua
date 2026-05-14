@@ -13,7 +13,6 @@ keybinds({
 local modules = {
 	"display/monitors.lua",
 	"display/dock.lua",
-	"display/dock.lua",
 	"system/autostart.lua",
 	"system/env.lua",
 	"ui/settings.lua",

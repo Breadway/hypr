@@ -5,3 +5,4 @@ hyprland-api.lua
 awww.conf
 hyprlock.conf
 binds.json
+nohup.out

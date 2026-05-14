@@ -98,11 +98,6 @@
                 "key": "RETURN"
             },
             {
-                "action": "exec",
-                "command": "lua /home/breadway/.config/hypr/scripts/system/sync-display.lua",
-                "key": "Q"
-            },
-            {
                 "action": "kill",
                 "key": "BACKSPACE"
             },
@@ -405,11 +400,6 @@
                 "key": "RETURN"
             },
             {
-                "action": "exec",
-                "command": "lua /home/breadway/.config/hypr/scripts/system/sync-display.lua",
-                "key": "Q"
-            },
-            {
                 "action": "kill",
                 "key": "BACKSPACE"
             },
@@ -700,14 +690,6 @@
                 "action": "exec",
                 "command": "blueman-manager",
                 "key": "U",
-                "mods": [
-                    "SUPER"
-                ]
-            },
-            {
-                "action": "exec",
-                "command": "lua /home/breadway/.config/hypr/scripts/system/sync-display.lua",
-                "key": "O",
                 "mods": [
                     "SUPER"
                 ]
