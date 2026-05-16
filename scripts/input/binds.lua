@@ -1,7 +1,6 @@
 -- scripts/input/binds.lua
-local json = dofile("/home/breadway/.config/hypr/scripts/lib/json.lua")
+local json = dofile(os.getenv("HOME") .. "/.config/hypr/scripts/lib/json.lua")
 
-local DEFAULT_CONFIG_PATH = "/home/breadway/.config/hypr/binds.json"
 local DEFAULT_LAYOUT = "qwerty"
 
 local function normalize_mods(value, fallback)
@@ -45,55 +44,47 @@ local function select_bindings(parsed)
         layout = os.getenv("HYPR_BIND_LAYOUT") or DEFAULT_LAYOUT
     end
 
+    local common = type(parsed.common) == "table" and parsed.common or {}
+    local globals = type(parsed.globals) == "table" and parsed.globals or {}
+    if #globals == 0 and type(parsed.global_bindings) == "table" then
+        globals = parsed.global_bindings
+    end
+
+    local layout_binds = {}
     if type(parsed.layouts) == "table" then
         local selected = parsed.layouts[layout]
-        if type(selected) ~= "table" then
-            selected = parsed.layouts[DEFAULT_LAYOUT]
-        end
+        if type(selected) ~= "table" then selected = parsed.layouts[DEFAULT_LAYOUT] end
         if type(selected) ~= "table" then
             for _, candidate in pairs(parsed.layouts) do
-                if type(candidate) == "table" then
-                    selected = candidate
-                    break
-                end
+                if type(candidate) == "table" then selected = candidate; break end
             end
         end
-
-        local globals = type(parsed.globals) == "table" and parsed.globals or {}
-        if #globals == 0 and type(parsed.global_bindings) == "table" then
-            globals = parsed.global_bindings
-        end
-        local merged = {}
-
-        for _, entry in ipairs(selected or {}) do
-            if type(entry) == "table" then
-                merged[#merged + 1] = entry
-            end
-        end
-        for _, entry in ipairs(globals) do
-            if type(entry) == "table" then
-                merged[#merged + 1] = entry
-            end
-        end
-
-        return merged
+        layout_binds = selected or {}
+    elseif type(parsed.bindings) == "table" then
+        layout_binds = parsed.bindings
     end
 
-    if type(parsed.bindings) ~= "table" then
-        return {}
+    local merged = {}
+    for _, entry in ipairs(layout_binds) do
+        if type(entry) == "table" then merged[#merged + 1] = entry end
     end
-
-    return parsed.bindings
+    for _, entry in ipairs(common) do
+        if type(entry) == "table" then merged[#merged + 1] = entry end
+    end
+    for _, entry in ipairs(globals) do
+        if type(entry) == "table" then merged[#merged + 1] = entry end
+    end
+    return merged
 end
 
 return function(configPath)
-    local parsed = json.load(configPath or DEFAULT_CONFIG_PATH)
+    local parsed = json.load(configPath)
     if type(parsed) ~= "table" then
         return { default_mods = { "SUPER" }, bindings = {} }
     end
 
     return {
         default_mods = normalize_mods(parsed.default_mods, { "SUPER" }),
-        bindings = select_bindings(parsed),
+        bindings     = select_bindings(parsed),
     }
 end

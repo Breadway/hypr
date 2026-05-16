@@ -1,9 +1,10 @@
 #!/usr/bin/env lua
 -- scripts/add-bind.lua — interactive Hyprland bind adder
 
-local json = dofile("/home/breadway/.config/hypr/scripts/lib/json.lua")
+local home = os.getenv("HOME") or "/home/breadway"
+local json = dofile(home .. "/.config/hypr/scripts/lib/json.lua")
 
-local BINDS_FILE = "/home/breadway/.config/hypr/binds.json"
+local BINDS_FILE = home .. "/.config/hypr/binds.json"
 
 -- ANSI color codes
 local C = {

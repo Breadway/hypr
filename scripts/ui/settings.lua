@@ -14,9 +14,9 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
-        rounding_power = 2,
-        active_opacity = 1.0,
+        rounding         = 10,
+        rounding_power   = 2,
+        active_opacity   = 1.0,
         inactive_opacity = 1.0,
 
         shadow = {
@@ -27,12 +27,11 @@ hl.config({
         },
 
         blur = {
-            enabled         = true,
-            size            = 8,
-            passes          = 3,
-                new_optimizations = true,
-                -- allow per-window opacity to take effect
-                ignore_opacity  = false,
+            enabled           = true,
+            size              = 8,
+            passes            = 3,
+            new_optimizations = true,
+            ignore_opacity    = false,
         },
     },
 
@@ -51,7 +50,7 @@ hl.config({
         sensitivity  = 0,
 
         touchpad = {
-            natural_scroll = true,
+            natural_scroll       = true,
             disable_while_typing = false,
         },
     },
